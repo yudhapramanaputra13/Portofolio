@@ -1,0 +1,288 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    background-color: #333; /* Ubah warna latar belakang sesuai keinginan, misalnya #333 untuk abu-abu gelap */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 1.2rem;
+    color: #fff; /* Ubah warna teks sesuai latar belakang, misalnya #fff untuk putih */
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 1.5rem;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff; /* Ubah warna teks link sesuai latar belakang, misalnya #fff untuk putih */
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #61dafb; /* Ubah warna latar belakang saat hover, misalnya #61dafb untuk biru muda */
+    border-radius: 4px;
+}
+
+main {
+    padding-top: 70px; /* Adjust for fixed header height */
+}
+
+.section {
+    padding: 4rem 2rem;
+    margin: 0;
+    color: #333;
+    position: relative;
+}
+
+.bg-light-blue {
+    background-color: #e0f7fa;
+}
+
+.bg-light-gray {
+    background-color: #f5f5f5;
+}
+
+.intro {
+    text-align: center;
+    padding: 1rem; /* Tambahkan padding untuk memberikan ruang pada elemen */
+}
+
+.intro .profile-pic {
+    width: 100px; /* Ukuran gambar profil yang lebih kecil untuk tampilan mobile */
+    height: 100px; /* Sesuaikan tinggi gambar agar proporsional */
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.intro h2 {
+    font-size: 1.5rem; /* Ukuran teks yang lebih kecil untuk tampilan mobile */
+    margin: 0.5rem 0;
+}
+
+.intro p {
+    margin: 0.5rem 0;
+    font-size: 1rem; /* Ukuran teks yang lebih kecil untuk tampilan mobile */
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column; /* Ubah flex direction ke kolom untuk tampilan mobile */
+    align-items: center;
+    gap: 1rem; /* Tambahkan jarak antar elemen */
+    margin-top: 1rem;
+}
+
+.social-icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem; /* Tambahkan jarak antar elemen dalam ikon sosial */
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.social-icon img {
+    width: 30px; /* Ukuran ikon sosial yang lebih kecil untuk tampilan mobile */
+    height: 30px;
+}
+
+@media (max-width: 768px) {
+    .intro .profile-pic {
+        width: 80px; /* Ukuran gambar profil yang lebih kecil untuk tampilan mobile */
+        height: 80px;
+    }
+
+    .intro h2 {
+        font-size: 1.2rem; /* Ukuran teks yang lebih kecil untuk tampilan mobile */
+    }
+
+    .intro p {
+        font-size: 0.9rem; /* Ukuran teks yang lebih kecil untuk tampilan mobile */
+    }
+
+    .social-icons {
+        gap: 0.5rem; /* Jarak antar elemen yang lebih kecil untuk tampilan mobile */
+    }
+
+    .social-icon {
+        flex-direction: column; /* Ubah flex direction ke kolom untuk tampilan mobile */
+    }
+
+    .social-icon img {
+        width: 25px; /* Ukuran ikon sosial yang lebih kecil untuk tampilan mobile */
+        height: 25px;
+    }
+}
+
+footer {
+    background-color: #e0f7fa;
+    color: #333;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+}
+
+.decorative-element {
+    width: 50px;
+    height: 50px;
+    background-color: #ffeb3b;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    animation: move 5s infinite;
+}
+
+.tech-icon {
+    width: 60px;
+    height: 60px;
+    background: url('tech-icon.png') no-repeat center/contain; /* Ganti dengan ikon teknologi yang sesuai */
+    border-radius: 50%;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 300px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 150px; /* Mengurangi tinggi gambar */
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+}
+
+.card p {
+    padding: 0 1rem 1rem 1rem;
+    color: #666;
+}
+
+.card ol {
+    padding-left: 1.5rem;
+    text-align: left; /* Pastikan teks rata kiri */
+    margin: 1rem 0;
+    color: #666;
+}
+
+.card ol li {
+    margin-bottom: 0.5rem; /* Tambahkan jarak antar item */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+@keyframes move {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(20px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        padding: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .intro .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+
+    .intro h2 {
+        font-size: 1.5rem;
+    }
+
+    .intro p {
+        font-size: 1rem;
+    }
+
+    .section {
+        padding: 2rem 1rem;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .decorative-element {
+        width: 30px;
+        height: 30px;
+    }
+
+    .tech-icon {
+        width: 40px;
+        height: 40px;
+    }
+}
